@@ -35,15 +35,10 @@ const UserController = {
         message: "Te hemos enviado un correo para confirmar el registro", user});
         } 
 
-        
         catch (err) {
             err.origin = 'User';
             next(err)
         }},
-
-
-
-
 
     login(req, res){
         User.findOne({
@@ -113,11 +108,19 @@ const UserController = {
             } catch (error) {
               console.error(error)
             }
-          }
-        
-        
+          },
 
-
+        getInfo(req, res){
+            User.findOne({
+                where: {
+                    id: req.user.id
+                }
+            })
+            .then((user) => res.send(user))
+            .catch((err) => {
+                res.status(500).send({ message: "Error info." })
+            })
+    },
 }
 
 module.exports = UserController;

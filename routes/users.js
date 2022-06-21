@@ -5,9 +5,10 @@ const { authentication, isAdmin, isManager, isUser } = require('../middlewares/a
 
 router.post('/createUser', UserController.create);
 router.post('/login', UserController.login);
-router.delete('/logout/',authentication, isUser, UserController.logout);
+router.delete('/logout',authentication, isUser, UserController.logout);
 router.get('/UserOrder',authentication, isUser, UserController.loginUserOrder);
 router.get('/confirm/:emailToken', UserController.confirm);
+router.get('/info', authentication, UserController.getInfo)
 
 //Hola
 
