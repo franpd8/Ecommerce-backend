@@ -6,33 +6,39 @@ module.exports = {
      
     await queryInterface.bulkInsert('Books', [
       {
-        title: 'Quijote',
-        price: "25€",
+        title: 'Leer es Sexy',
+        price: 25,
+        image:"https://i.imgur.com/2Da11G6.jpg",
         // GenreId: [3],
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        title: 'Alien',
-        price: "15€",
+        title: 'Bakalao',
+        price: 25,
+        image:"https://i.imgur.com/Cynq9q0.jpg",
         // GenreId: [2, 4],
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        title: 'La Carretera',
-        price: "17€",
+        title: 'Lo que pasó, pasó',
+        price: 25,
+        image:"https://i.imgur.com/lJ7sFXT.jpg",
         // GenreId: [3],
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        title: 'Austin Power',
-        price: "25€",
+        title: 'Todo saldrá mal',
+        price: 25,
+        image:"https://i.imgur.com/ai2157s.jpg",
         // GenreId: [1],
         createdAt: new Date(),
         updatedAt: new Date()
       },
+  
+
   ], {});
     
   },
