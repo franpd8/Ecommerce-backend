@@ -2,7 +2,7 @@ const { Order, Book, User } = require("../models/index");
 
 const OrderController = {
     create(req, res) {
-        Order.create({...req.body })
+        Order.create({...req.body})
             .then(order => {
                 order.addBook(req.body.BookId) 
                 res.status(201).send({ message: 'Pedido añadido con éxito', order })})
