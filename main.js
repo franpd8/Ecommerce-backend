@@ -11,7 +11,7 @@ const { typeError } = require('./middlewares/errors.js');
 app.use('/users', require('./routes/users'));
 app.use('/products', require('./routes/products'));
 app.use('/orders', require('./routes/orders'));
-app.use('/genres', require('./routes/genres'));
+app.use('/categories', require('./routes/categories'));
 
 app.use(typeError);
 
