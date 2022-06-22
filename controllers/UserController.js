@@ -1,4 +1,4 @@
-const { User, Token, Order, Book, Sequelize} = require("../models/index");
+const { User, Token, Order, Product, Sequelize} = require("../models/index");
 const bcrypt = require ('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { jwt_secret } = require('../config/config.json')['development']
@@ -83,7 +83,7 @@ const UserController = {
                     where: {
                         id: req.user.id
                     },
-                    include: [{model: Order, include: [{model:Book}]}
+                    include: [{model: Order, include: [{model:Product}]}
                 ]
                 })
                 .then((user) => res.send(user))
