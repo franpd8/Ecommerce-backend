@@ -10,19 +10,19 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        OrderId: 2,
+        OrderId: 1,
         ProductId: 2,       
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        OrderId: 3,
+        OrderId: 1,
         ProductId: 1,       
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        OrderId: 3,
+        OrderId: 1,
         ProductId: 3,       
         createdAt: new Date(),
         updatedAt: new Date()
