@@ -1,25 +1,25 @@
-const { Book, Genre, Sequelize } = require("../models/index");
+const { Product, Genre, Sequelize } = require("../models/index");
 const { Op } = Sequelize;
 
-const BookController = {
-    addBook(req, res, next) {
+const ProductController = {
+    addProduct(req, res, next) {
       if (req.file)req.body.Image = (req.file.destination + req.file.filename);
       console.log(req.file)  
-      Book.create({...req.body })
-            .then(book => {
-              book.addGenre(req.body.GenreId)
-              res.status(201).send({ message: 'Libro añadido exitosamente.', book })
+      Product.create({...req.body })
+            .then(product => {
+              product.addGenre(req.body.GenreId)
+              res.status(201).send({ message: 'Libro añadido exitosamente.', product })
             })
             .catch(error => {
-              error.origin = 'Book';
+              error.origin = 'Product';
               next(error);              
           });
     },
     getAll(req, res) {
-        Book.findAll({
+        Product.findAll({
           include: [{model: Genre, through: { attributes: [] } }],
         })
-          .then((books) => res.send(books))
+          .then((products) => res.send(products))
           .catch((err) => {
             console.log(err);
             res.status(500).send({
@@ -28,7 +28,7 @@ const BookController = {
           });
     },
     async delete(req, res) {
-        await Book.destroy({
+        await Product.destroy({
           where: {
             id: req.params.id,
           },
@@ -36,10 +36,10 @@ const BookController = {
         res.send("El libro ha sido eliminada con éxito");
       },
     getById(req, res) {
-    Book.findByPk(req.params.id, {
+    Product.findByPk(req.params.id, {
       include: [],
     })
-      .then((book) => res.send(book))
+      .then((product) => res.send(product))
       .catch((err) => {
         console.log(err);
         res.status(500).send({
@@ -48,7 +48,7 @@ const BookController = {
       });
   },
   getByName(req, res) {
-    Book.findAll({
+    Product.findAll({
       where: {
         title: {
           [Op.like]: `%${req.params.title}%`,
@@ -65,7 +65,7 @@ const BookController = {
       });
   },
   getByPrice(req, res) {
-    Book.findAll({
+    Product.findAll({
       where: {
         price: {
           [Op.like]: `%${req.params.price}%`,
@@ -83,10 +83,10 @@ const BookController = {
   },
   
   getAllOrdered(req, res) {
-    Book.findAll({
+    Product.findAll({
       order: [['price', 'DESC']]
     })
-      .then((books) => res.send(books))
+      .then((products) => res.send(products))
       .catch((err) => {
         console.log(err);
         res.status(500).send({
@@ -96,7 +96,7 @@ const BookController = {
   },
   async update(req, res) {
     try {
-      await Book.update(
+      await Product.update(
         { ...req.body },
         {
           where: {
@@ -104,8 +104,8 @@ const BookController = {
           },
         }
       );
-      const book = await Book.findByPk(req.params.id);
-      book.setGenres(req.body.GenreId); //actualiza el género en la tabla intermedia
+      const product = await Product.findByPk(req.params.id);
+      product.setGenres(req.body.GenreId); //actualiza el género en la tabla intermedia
       res.send("Libro actualizado con éxito");
     } catch (error) {
       console.error(error);
@@ -116,4 +116,4 @@ const BookController = {
   }
 }
 
-module.exports = BookController
+module.exports = ProductController

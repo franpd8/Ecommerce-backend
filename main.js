@@ -9,7 +9,7 @@ const { typeError } = require('./middlewares/errors.js');
 // const db = require('./config/config')
 
 app.use('/users', require('./routes/users'));
-app.use('/books', require('./routes/books'));
+app.use('/products', require('./routes/products'));
 app.use('/orders', require('./routes/orders'));
 app.use('/genres', require('./routes/genres'));
 
