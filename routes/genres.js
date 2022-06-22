@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const GenreController = require('../controllers/GenreController')
+const CategoryController = require('../controllers/CategoryController')
 const { authentication, isAdmin, isManager, isUser } = require('../middlewares/authentication');
 
 
-router.post('/addGenre', authentication, isManager, GenreController.addGenre);
-router.get('/getGenreById/:id',authentication, isUser, GenreController.genreById);
-router.get('/getGenreByName/:name',authentication, isUser, GenreController.genreByName);
-router.get('/getGenre',authentication, isUser, GenreController.getGenreWithBooks); //Endpoint de generos con sus libros
-router.get('/getAll',authentication, isUser, GenreController.getAll); //Endpoint que trae todos los generos
-router.delete('/deleteGenre/:id',authentication, isManager, GenreController.delete); //Eliminar un genero
+router.post('/addCategory', authentication, CategoryController.addCategory);
+router.get('/getCategoryById/:id',authentication, CategoryController.categoryById);
+router.get('/getCategoryByName/:name',authentication, CategoryController.categoryByName);
+router.get('/getCategory',authentication, CategoryController.getCategoryWithProducts); //Endpoint de generos con sus libros
+router.get('/getAll',authentication, CategoryController.getAll); //Endpoint que trae todos los generos
+router.delete('/deleteCategory/:id',authentication, CategoryController.delete); //Eliminar un genero
 
 
 
