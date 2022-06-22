@@ -17,7 +17,7 @@ const typeError = (err, req, res, next) => {
     if(err.name === 'SequelizeValidationError' || err.name === 'SequelizeUniqueConstraintError'){
         return err = handleValidationError(err, res);
     } else
-        if (errOrigin === 'Book') {
+        if (errOrigin === 'Product') {
             res.status(500).send('Hubo un problema a la hora de crear un Libro');
         } else 
             if (errOrigin === 'Order'){

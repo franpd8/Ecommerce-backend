@@ -14,7 +14,7 @@ const UserController = {
         ...req.body,
         password: hash,
         confirmed: false,
-        // role: "user",
+        role: "user",
     });
 
     //res.send({messages: 'Usuario creado correctamente', user});
@@ -31,7 +31,7 @@ const UserController = {
     //   });
 
     
-        res.status(201).send({
+    res.status(201).send({
         message: "Te hemos enviado un correo para confirmar el registro", user});
         } 
 

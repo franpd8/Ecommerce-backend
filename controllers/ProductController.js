@@ -1,4 +1,4 @@
-const { Product, Genre, Sequelize } = require("../models/index");
+const { Product, Category, Sequelize } = require("../models/index");
 const { Op } = Sequelize;
 
 const ProductController = {
@@ -7,8 +7,8 @@ const ProductController = {
       console.log(req.file)  
       Product.create({...req.body })
             .then(product => {
-              product.addGenre(req.body.GenreId)
-              res.status(201).send({ message: 'Libro añadido exitosamente.', product })
+              product.addCategory(req.body.CategoryId)
+              res.status(201).send({ message: 'Producto añadido exitosamente.', product })
             })
             .catch(error => {
               error.origin = 'Product';
@@ -17,13 +17,13 @@ const ProductController = {
     },
     getAll(req, res) {
         Product.findAll({
-          include: [{model: Genre, through: { attributes: [] } }],
+          include: [{model: Category, through: { attributes: [] } }],
         })
           .then((products) => res.send(products))
           .catch((err) => {
             console.log(err);
             res.status(500).send({
-              message: "Ha habido un problema al cargar los libros",
+              message: "Ha habido un problema al cargar los productos",
             });
           });
     },
@@ -43,24 +43,26 @@ const ProductController = {
       .catch((err) => {
         console.log(err);
         res.status(500).send({
-          message: "Ha habido un problema al cargar el libro",
+          message: "Ha habido un problema al cargar el producto",
         });
       });
   },
   getByName(req, res) {
     Product.findAll({
       where: {
-        title: {
-          [Op.like]: `%${req.params.title}%`,
+        name: {
+          [Op.like]: `%${req.params.name}%`,
         },
       },
       include: [],
     })
-      .then((post) => res.send(post))
+      .then((post) => 
+      
+      res.send(post))
       .catch((err) => {
         console.log(err);
         res.status(500).send({
-          message: "Ha habido un problema al cargar el libro",
+          message: "Ha habido un problema al buscar el producto",
         });
       });
   },
@@ -90,7 +92,19 @@ const ProductController = {
       .catch((err) => {
         console.log(err);
         res.status(500).send({
-          message: "Ha habido un problema al cargar los libros",
+          message: "Ha habido un problema al cargar los productos",
+        });
+      });
+  },
+  getAllOrderedASC(req, res) {
+    Product.findAll({
+      order: [['price', 'ASC']]
+    })
+      .then((products) => res.send(products))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).send({
+          message: "Ha habido un problema al cargar los productos",
         });
       });
   },
@@ -105,13 +119,13 @@ const ProductController = {
         }
       );
       const product = await Product.findByPk(req.params.id);
-      product.setGenres(req.body.GenreId); //actualiza el género en la tabla intermedia
-      res.send("Libro actualizado con éxito");
+      product.setCategories(req.body.CategoryId); //actualiza el género en la tabla intermedia
+      res.send("Producto actualizado con éxito");
     } catch (error) {
       console.error(error);
       res
         .status(500)
-        .send({ message: "no ha sido posible actualizado el libro" });
+        .send({ message: "no ha sido posible actualizar el producto" });
     }
   }
 }

@@ -9,10 +9,12 @@ const CategoryController = {
     },
 
     categoryById(req, res) {
-        Category.findByPk(req.params.id)
+        Category.findByPk(req.params.id,{
+          include: [{model: Product, through: { attributes: [] } }],
+        })
         .then(category => res.send(category))
     },
-
+    
     categoryByName(req, res) {
         Category.findOne({
             where: {
