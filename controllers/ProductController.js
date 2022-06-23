@@ -57,7 +57,7 @@ const ProductController = {
       include: [],
     })
       .then((post) => 
-      
+
       res.send(post))
       .catch((err) => {
         console.log(err);
