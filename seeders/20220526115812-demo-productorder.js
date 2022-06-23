@@ -16,7 +16,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        OrderId: 3,
+        OrderId: 1,
         ProductId: 1,       
         createdAt: new Date(),
         updatedAt: new Date()
