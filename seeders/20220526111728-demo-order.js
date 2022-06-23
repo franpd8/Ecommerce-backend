@@ -27,12 +27,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
-      {
-        number: '#5ouw',        
-        UserId: [3],
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
+    
   ], {});
   },
 

@@ -83,7 +83,8 @@ const UserController = {
                     where: {
                         id: req.user.id
                     },
-                    include: [{model: Order, include: [{model:Product}]}
+                    include: [{model: Order,
+                        order: [['createdAt', 'ASC']], include: [{model:Product}]}
                 ]
                 })
                 .then((user) => res.send(user))

@@ -10,7 +10,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        OrderId: 1,
+        OrderId: 2,
         ProductId: 2,       
         createdAt: new Date(),
         updatedAt: new Date()
@@ -22,7 +22,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        OrderId: 1,
+        OrderId: 3,
         ProductId: 3,       
         createdAt: new Date(),
         updatedAt: new Date()

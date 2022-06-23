@@ -14,12 +14,12 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        name: 'Accesorio',        
+        name: 'Sudadera',        
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name: 'Otro',        
+        name: 'Accesorio',        
         createdAt: new Date(),
         updatedAt: new Date()
       },
