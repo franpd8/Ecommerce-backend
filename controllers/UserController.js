@@ -1,4 +1,4 @@
-const { User, Token, Order, Book, Sequelize} = require("../models/index");
+const { User, Token, Order, Product, Sequelize} = require("../models/index");
 const bcrypt = require ('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { jwt_secret } = require('../config/config.json')['development']
@@ -14,7 +14,7 @@ const UserController = {
         ...req.body,
         password: hash,
         confirmed: false,
-        // role: "user",
+        role: "user",
     });
 
     //res.send({messages: 'Usuario creado correctamente', user});
@@ -31,7 +31,7 @@ const UserController = {
     //   });
 
     
-        res.status(201).send({
+    res.status(201).send({
         message: "Te hemos enviado un correo para confirmar el registro", user});
         } 
 
@@ -83,7 +83,8 @@ const UserController = {
                     where: {
                         id: req.user.id
                     },
-                    include: [{model: Order, include: [{model:Book}]}
+                    include: [{model: Order,
+                        order: [['createdAt', 'ASC']], include: [{model:Product}]}
                 ]
                 })
                 .then((user) => res.send(user))

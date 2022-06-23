@@ -1,17 +1,17 @@
-const { Order, Book, User } = require("../models/index");
+const { Order, Product, User } = require("../models/index");
 
 const OrderController = {
   create(req, res) {
     Order.create({ ...req.body, UserId: req.user.id })
       .then((order) => {
-        order.addBook(req.body.BookId);
+        order.addProduct(req.body.ProductId);
         res.status(201).send({ message: "Pedido añadido con éxito", order });
       })
       .catch(console.error);
   },
   getAll(req, res) {
     Order.findAll({
-      include: [{ model: Book, through: { attributes: [] } }, User],
+      include: [{ model: Product, through: { attributes: [] } }, User],
     })
       .then((orders) => res.send(orders))
       .catch((err) => {

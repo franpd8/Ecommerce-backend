@@ -1,3 +1,4 @@
+
 'use strict';
 const {
   Model
@@ -53,3 +54,4 @@ module.exports = (sequelize, DataTypes) => {
   });
   return User;
 };
+
