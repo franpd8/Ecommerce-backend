@@ -125,17 +125,36 @@ const UserController = {
     }
   },
 
-  getInfo(req, res) {
-    User.findOne({
-      where: {
-        id: req.user.id,
+        getInfo(req, res){
+            User.findOne({
+                where: {
+                    id: req.user.id
+                }
+            })
+            .then((user) => res.send(user))
+            .catch((err) => {
+                res.status(500).send({ message: "Error info." })
+            })
+    },
+
+    async update(req, res) {
+        try {
+            await User.update(
+                { ...req.body },
+                {
+                  where: {
+                    id: req.user.id,
+                  },
+                }
+              );
+          res.send({ message: "usuario actualizado con éxito", User });
+        } catch (error) {
+          console.error(error);
+          res
+            .status(500)
+            .send({ message: "Ha habido un problema al actualizar el usuario" });
+        }
       },
-    })
-      .then((user) => res.send(user))
-      .catch((err) => {
-        res.status(500).send({ message: "Error info." });
-      });
-  },
-};
+}
 
 module.exports = UserController;

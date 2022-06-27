@@ -6,6 +6,8 @@ const { authentication, isAdmin, isManager, isUser } = require('../middlewares/a
 
 router.post('/createOrder',authentication, OrderController.create)
 router.get('/getAll',authentication, OrderController.getAll)
+router.get('/getById/:id',authentication, OrderController.getById)
+
 
 
 module.exports = router;
