@@ -12,7 +12,7 @@ const CategoryController = {
         Category.findByPk(req.params.id,{
           include: [{model: Product, through: { attributes: [] } }],
         })
-        .then(category => res.send(category))
+        .then(category => res.send(category.Products))
     },
     
     categoryByName(req, res) {
@@ -33,7 +33,7 @@ const CategoryController = {
           .catch((err) => {
             console.log(err);
             res.status(500).send({
-              message: "Ha habido un problema al cargar los products",
+              message: "Ha habido un problema al cargar los productos",
             });
           });
     },

@@ -47,6 +47,7 @@ const ProductController = {
         });
       });
   },
+
   getByName(req, res) {
     Product.findAll({
       where: {
