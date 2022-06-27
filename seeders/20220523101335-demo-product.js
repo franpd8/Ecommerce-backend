@@ -69,8 +69,70 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
-  
-
+      {
+        // camiseta
+        name: 'Camiseta de rayas',
+        price: 20,
+        image:"https://images.vans.com/is/image/VansEU/VN0A5LK8YSJ-HERO?wid=800&hei=800&fmt=jpg&qlt=85,1&op_sharpen=0&resMode=sharp2&op_usm=1,1,1,0",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        // sudadera
+        name: 'Sudadera Cuello Redondo',
+        price: 35,
+        image:"https://images.vans.com/is/image/VansEU/VN0A5LKIYSJ-HERO?wid=800&hei=800&fmt=jpg&qlt=85,1&op_sharpen=0&resMode=sharp2&op_usm=1,1,1,0",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        // camiseta
+        name: 'Mental Vacation',
+        price: 20,
+        image:"https://i.imgur.com/KyynMBg.jpg",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        // pantalon
+        name: 'Suerte Pants',
+        price: 35,
+        image:"https://i.imgur.com/mLuLw6O.jpg",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        // sudadera
+        name: 'Moonlight Hoodie',
+        price: 30,
+        image:"https://i.imgur.com/9Xy24u2.jpg",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        // sudadera
+        name: 'Baby Perrea',
+        price: 30,
+        image:"https://i.imgur.com/HgPleKi.jpg",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        // camiseta
+        name: 'Todo es Temporal',
+        price: 20,
+        image:"https://i.imgur.com/HEFNLWZ.jpg",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        // camiseta
+        name: 'Se Habla en la Cocina',
+        price: 20,
+        image:"https://i.imgur.com/MytSrWx.jpg",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
   ], {});
     
   },
