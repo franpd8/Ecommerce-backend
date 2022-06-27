@@ -21,6 +21,21 @@ const OrderController = {
         });
       });
   },
+
+  getById(req, res) {
+    Order.findByPk(req.params.id, {
+      include: [],
+    })
+      .then((order) => res.send(order))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).send({
+          message: "Ha habido un problema al cargar el pedido",
+        });
+      });
+  },
+
+  
 };
 
 module.exports = OrderController;
