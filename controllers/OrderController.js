@@ -11,6 +11,7 @@ const OrderController = {
   },
   getAll(req, res) {
     Order.findAll({
+      order: [['createdAt', 'DESC']],
       include: [{ model: Product, through: { attributes: [] } }, User],
     })
       .then((orders) => res.send(orders))
@@ -21,6 +22,7 @@ const OrderController = {
         });
       });
   },
+
 };
 
 module.exports = OrderController;
