@@ -23,6 +23,16 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        name: 'Hombre',        
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'Mujer',        
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
   ], {});
   },
 

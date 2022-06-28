@@ -9,6 +9,8 @@ router.delete('/logout',authentication,  UserController.logout);
 router.get('/UserOrder',authentication,  UserController.loginUserOrder);
 router.get('/confirm/:emailToken', UserController.confirm);
 router.get('/info', authentication, UserController.getInfo)
+router.post('/updateUser', authentication, UserController.update);
+
 
 //Hola
 

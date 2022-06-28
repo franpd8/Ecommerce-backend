@@ -47,6 +47,7 @@ const ProductController = {
         });
       });
   },
+
   getByName(req, res) {
     Product.findAll({
       where: {
@@ -57,7 +58,7 @@ const ProductController = {
       include: [],
     })
       .then((post) => 
-      
+
       res.send(post))
       .catch((err) => {
         console.log(err);

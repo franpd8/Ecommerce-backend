@@ -5,7 +5,7 @@ const { authentication, isAdmin, isManager, isUser } = require('../middlewares/a
 
 
 router.post('/addCategory',  CategoryController.addCategory);
-router.get('/getCategoryById/:id', CategoryController.categoryById);
+router.get('/getCategoryById/:id', CategoryController.categoryById); //getProductByCategory
 router.get('/getCategoryByName/:name', CategoryController.categoryByName);
 router.get('/getCategory',CategoryController.getCategoryWithProducts); //Endpoint de generos con sus libros
 router.get('/getAll', CategoryController.getAll); //Endpoint que trae todos los generos
