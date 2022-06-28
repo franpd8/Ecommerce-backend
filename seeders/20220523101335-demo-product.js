@@ -71,17 +71,17 @@ module.exports = {
       },
       {
         // camiseta
-        name: 'Camiseta de rayas',
+        name: 'Me la sopla',
         price: 20,
-        image:"https://images.vans.com/is/image/VansEU/VN0A5LK8YSJ-HERO?wid=800&hei=800&fmt=jpg&qlt=85,1&op_sharpen=0&resMode=sharp2&op_usm=1,1,1,0",
+        image:"https://i.imgur.com/RgMkig2.jpg",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        // sudadera
-        name: 'Sudadera Cuello Redondo',
-        price: 35,
-        image:"https://images.vans.com/is/image/VansEU/VN0A5LKIYSJ-HERO?wid=800&hei=800&fmt=jpg&qlt=85,1&op_sharpen=0&resMode=sharp2&op_usm=1,1,1,0",
+        // camiseta
+        name: 'Perrita Super Caliente',
+        price: 25,
+        image:"https://i.imgur.com/N67kcSi.jpg",
         createdAt: new Date(),
         updatedAt: new Date()
       },

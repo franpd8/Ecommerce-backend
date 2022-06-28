@@ -16,6 +16,12 @@ module.exports = {
         updatedAt: new Date()
       },
       {
+        CategoryId: [6],
+        ProductId: [1],        
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
         CategoryId: [1],
         ProductId: [2],     
         createdAt: new Date(),
@@ -35,6 +41,11 @@ module.exports = {
       },
       {
         CategoryId: [5],
+        ProductId: [3],      
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },{
+        CategoryId: [6],
         ProductId: [3],      
         createdAt: new Date(),
         updatedAt: new Date()
@@ -58,6 +69,18 @@ module.exports = {
         updatedAt: new Date()
       },
       {
+        CategoryId: [5],
+        ProductId: [5],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [6],
+        ProductId: [5],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
         CategoryId: [2],
         ProductId: [6],    
         createdAt: new Date(),
@@ -76,6 +99,18 @@ module.exports = {
         updatedAt: new Date()
       },
       {
+        CategoryId: [5],
+        ProductId: [7],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [6],
+        ProductId: [7],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
         CategoryId: [3],
         ProductId: [8],    
         createdAt: new Date(),
@@ -88,26 +123,130 @@ module.exports = {
         updatedAt: new Date()
       },
       {
+        CategoryId: [5],
+        ProductId: [8],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        // aqui
         CategoryId: [1],
         ProductId: [9],    
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
+        // aqui
         CategoryId: [6],
         ProductId: [9],    
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        CategoryId: [3],
+        CategoryId: [6],
         ProductId: [10],    
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        CategoryId: [6],
+        CategoryId: [1],
         ProductId: [10],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [5],
+        ProductId: [11],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [1],
+        ProductId: [11],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [2],
+        ProductId: [12],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [5],
+        ProductId: [12],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [6],
+        ProductId: [12],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [6],
+        ProductId: [13],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [5],
+        ProductId: [13],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [3],
+        ProductId: [13],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [3],
+        ProductId: [14],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [5],
+        ProductId: [14],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [6],
+        ProductId: [14],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [1],
+        ProductId: [15],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [5],
+        ProductId: [15],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [6],
+        ProductId: [15],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [1],
+        ProductId: [16],    
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        CategoryId: [6],
+        ProductId: [16],    
         createdAt: new Date(),
         updatedAt: new Date()
       },
