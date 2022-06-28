@@ -167,9 +167,9 @@ module.exports = {
       },
       {
         // accesorio 21 unisex
-        name: 'Calcetines Apoya a tu Gente',
+        name: 'Apoya a tu Gente',
         price: 10,
-        image:"https://i.imgur.com/ZnppUvp.jpg",
+        image:"https://i.imgur.com/T0oGa8f.jpg",
         createdAt: new Date(),
         updatedAt: new Date()
       },
